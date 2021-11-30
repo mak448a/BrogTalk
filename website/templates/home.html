@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}
+Brogtalk
+{% endblock %}
+{% block dropdown_item1 %}
+<!-- Make it active -->
+active
+{% endblock %}
+
+{% block home_is_active %}
+<!-- Make it active -->
+active
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+  <h1 style="color: blue;">
+    Brogtalk
+  </h1>
+
+  <br>
+  <form method="POST">
+    <h3 align="center">Download</h3>
+    <div class="form-group">
+      <!-- <label for="email">Email Address</label> -->
+      <input
+        type="text"
+        id="url"
+        name="url"
+        class="form-control"
+        placeholder="Enter url here"
+      />
+      <br />
+      <div align="center">
+        <button 
+          class="btn {% if not url%}btn-primary{% endif %}{% if url %}btn-secondary{% endif %}" 
+          type="submit"
+        >Get link</button>
+      </div>
+    </div>
+  </form>
+
+
+  {% if url %}
+    {% if "http" in url %}
+      <a href='{{url}}'>
+        <button class="btn btn-primary">
+          Download Now!!!
+        </button>
+      </a>
+    {% endif %}
+  {% endif %}
+
+  <br><br>
+  <h2>
+    What is Brogtalk?
+  </h2>
+  <p style="font-size:1.1rem;">
+    Brogtalk is your place to download audio from 
+    Blogtalk.
+  </p>
+  <p>&copy; Brogtalk 2021</p>
+  
+</div>
+{% endblock %}
