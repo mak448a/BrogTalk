@@ -1,5 +1,5 @@
 # Brogtalk
-This is a website to download videos from blogtalkradio.com.
+This is a website made to download videos from blogtalkradio.com.
 
 ## Website
-https://brogtalk.googleplay.repl.co
+https://mak448a.github.io/Brogtalk
